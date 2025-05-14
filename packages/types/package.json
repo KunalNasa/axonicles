@@ -1,0 +1,10 @@
+{
+  "name": "@axonicles/types",
+  "description": "Contains all the interfaces and types used in Axonicles.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "exports" :{
+    "./types" : "./src/index.ts"
+  }
+}

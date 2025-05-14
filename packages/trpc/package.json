@@ -1,0 +1,9 @@
+{
+  "name": "@axonicles/trpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "exports" :{
+    "./trpc" : "./src/index.ts"
+  }
+}

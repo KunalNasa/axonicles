@@ -1,0 +1,14 @@
+{
+  "name": "@axonicles/schemas",
+  "exports": {
+    "./schemas": "./src/index.ts"
+  },
+  "description": "Contains all the shared schemas used in Axonicles. Mostly zod schemas.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^8.14.3",
+    "@axonicles/types": "*"
+  }
+}
