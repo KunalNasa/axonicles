@@ -23,10 +23,6 @@ export const RoadmapSchema = new Schema<Roadmap>({
     type: Number,
     default: 0,
   },
-  date_created: {
-    type: Date,
-    default: Date.now,
-  },
   generated_by: {
     type: String,
     default: "Gemini AI",
@@ -43,6 +39,8 @@ export const RoadmapSchema = new Schema<Roadmap>({
     type: Number,
     required: [true, "Must mention expected duration"]
   }
+}, {
+  timestamps : true
 });
 
 export const RoadmapModel = (mongoose.models.Roadmap as mongoose.Model<Roadmap>) || mongoose.model<Roadmap>("Roadmap", RoadmapSchema);

@@ -1,5 +1,11 @@
 import { Schema } from "mongoose";
 
+export const subtopicStatusEnum = {
+    done: "Done",
+    progress: "In Progress",
+    pending: "Is Pending"
+}
+
 export const subtopicSchema = new Schema({
     title: {
       type: String,
@@ -8,4 +14,12 @@ export const subtopicSchema = new Schema({
     resources: {
       type: String,
     },
+    description: {
+        type : String
+    },
+    status: {
+        type: String,
+        enum: Object.values(subtopicStatusEnum),
+        default: subtopicStatusEnum.pending
+    }
   })

@@ -1,0 +1,53 @@
+{
+    "_id": "664238ea23caa5ae7d8c7f12",
+    "title": "Learn TypeScript from Scratch",
+    "duration": 30,
+    "expectedDuration": 28,
+    "tasks": [
+      {
+        "title": "Basics of TypeScript",
+        "duration": 5,
+        "subtopics": [
+          {
+            "title": "Variables and Types",
+            "resources": "https://www.typescriptlang.org/docs/handbook/variable-declarations.html",
+            "description": "Understand how variables work in TS and differences between let, const, var.",
+            "status": "Done"
+          },
+          {
+            "title": "Functions in TypeScript",
+            "resources": "https://www.typescriptlang.org/docs/handbook/functions.html",
+            "description": "Learn how to define functions, use default and rest parameters.",
+            "status": "In Progress"
+          }
+        ],
+        "is_completed": false,
+        "prerequisites": [],
+        "startDate": "2024-05-01T00:00:00.000Z",
+        "endDate": "2024-05-05T00:00:00.000Z"
+      },
+      {
+        "title": "Advanced TypeScript Concepts",
+        "duration": 7,
+        "subtopics": [
+          {
+            "title": "Generics",
+            "resources": "https://www.typescriptlang.org/docs/handbook/generics.html",
+            "description": "Learn how to create reusable components using generics.",
+            "status": "Is Pending"
+          }
+        ],
+        "is_completed": false,
+        "prerequisites": ["Basics of TypeScript"],
+        "startDate": "2024-05-06T00:00:00.000Z",
+        "endDate": "2024-05-12T00:00:00.000Z"
+      }
+    ],
+    "progress": 0,
+    "date_created": "2024-04-30T10:00:00.000Z",
+    "generated_by": "Gemini AI",
+    "owner": "user_abc123",
+    "superOwner": "admin_xyz789",
+    "__v": 0
+}
+  

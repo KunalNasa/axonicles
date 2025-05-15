@@ -4,6 +4,6 @@ worker.on('completed', () => {
     console.log("Task completed");
 })
 
-worker.on('failed', () => {
-    console.log("Task failed");
+worker.on('failed', (err) => {
+    console.error("Task failed with error:", err);
 })
