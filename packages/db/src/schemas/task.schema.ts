@@ -23,15 +23,13 @@ export const TaskSchema = new Schema<Task>({
     type: Boolean,
     default: false,
   },
-  prerequisites: {
-    type: [String],
-    default: [],
-  },
   startDate : {
-    type : Date
+    type : Date,
+    default: null
   },
   endDate : {
-    type : Date
+    type : Date,
+    default: null
   }
 });
 

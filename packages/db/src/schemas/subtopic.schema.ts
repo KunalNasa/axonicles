@@ -17,9 +17,17 @@ export const subtopicSchema = new Schema({
     description: {
         type : String
     },
+    duration: {
+      type: Number,
+      default: 1
+    },
     status: {
         type: String,
         enum: Object.values(subtopicStatusEnum),
         default: subtopicStatusEnum.pending
-    }
-  })
+    },
+    prerequisites: {
+      type: [String],
+      default: [],
+    },
+})

@@ -1,7 +1,7 @@
 {
-  "name": "@axonicles/schemas",
+  "name": "@axonicles/zod-schemas",
   "exports": {
-    "./schemas": "./src/index.ts"
+    "./zodSchemas": "./src/index.ts"
   },
   "description": "Contains all the shared schemas used in Axonicles. Mostly zod schemas.",
   "version": "1.0.0",

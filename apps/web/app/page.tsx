@@ -6,10 +6,13 @@ export default async function Home() {
   try {
     await connectDB();
     testDB = await RoadmapModel.find();
-    await roadmapQueue.add('roadmapBuilder', {
-      title: "webdev",
-      prompt: "Create a roadmap to become a fullstack web developer"
-    })
+    const data = {
+      userPrompt: "Construct a roadmap for a beginner",
+      roadmapTitle: "Web Developer",
+      roadmapDuration: 180,
+      owner: "Kunal"
+    }
+    await roadmapQueue.add('roadmapBuilder', data);
     console.log(testDB);
   } catch (error:any) {
     console.log("Failed to connect DB", error.message);
