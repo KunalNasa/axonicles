@@ -1,0 +1,15 @@
+{
+  "name": "@axonicles/lib",
+  "exports": {
+    "./lib": "./src/index.ts"
+  },
+  "description": "Shared library for Axonicles. Contains all the shared code used in Axonicles.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@axonicles/types": "*",
+    "@google/genai": "^0.14.0",
+    "mongoose": "^8.14.3"
+  }
+}

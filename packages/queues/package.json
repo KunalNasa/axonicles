@@ -1,0 +1,15 @@
+{
+    "name": "@axonicles/queues",
+    "exports": {
+      "./queues": "./src/index.ts"
+    },
+    "description": "Shared library for Axonicles. Contains all the shared code used in Axonicles.",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+      "@axonicles/types": "*",
+      "@axonicles/lib": "*"
+    }
+  }
+  
