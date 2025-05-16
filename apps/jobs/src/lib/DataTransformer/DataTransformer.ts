@@ -3,14 +3,15 @@ import { Roadmap } from "@axonicles/types/types";
 import { IParser, IValidator, IEnricher, EnrichmentMeta } from "../../types";
 import { RoadmapType } from "./RoadmapValidator";
 
+
 export class DataTransformer {
   constructor(
     private parser: IParser,
     private validator: IValidator<RoadmapType>,
-    private enricher: IEnricher<RoadmapType>
+    private enricher: IEnricher<Roadmap>
   ) {}
 
-  public transform(raw: string, meta: EnrichmentMeta): RoadmapType | null {
+  public transform(raw: string, meta: EnrichmentMeta): Roadmap | null {
     try {
       const parsed = this.parser.parse(raw);
 

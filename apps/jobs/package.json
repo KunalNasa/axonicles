@@ -11,6 +11,7 @@
   "dependencies": {
     "@axonicles/lib": "*",
     "@axonicles/types": "*",
+    "@axonicles/db": "*",
     "@axonicles/zod-schemas": "*",
     "dotenv": "^16.5.0"
   }

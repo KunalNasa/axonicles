@@ -3,7 +3,7 @@ import { Schema } from "mongoose";
 export const subtopicStatusEnum = {
     done: "Done",
     progress: "In Progress",
-    pending: "Is Pending"
+    Pending: "Pending"
 }
 
 export const subtopicSchema = new Schema({
@@ -24,7 +24,7 @@ export const subtopicSchema = new Schema({
     status: {
         type: String,
         enum: Object.values(subtopicStatusEnum),
-        default: subtopicStatusEnum.pending
+        default: subtopicStatusEnum.Pending
     },
     prerequisites: {
       type: [String],

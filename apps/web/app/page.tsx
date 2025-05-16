@@ -13,7 +13,7 @@ export default async function Home() {
       owner: "Kunal"
     }
     await roadmapQueue.add('roadmapBuilder', data);
-    console.log(testDB);
+    // console.log(testDB);
   } catch (error:any) {
     console.log("Failed to connect DB", error.message);
   }
