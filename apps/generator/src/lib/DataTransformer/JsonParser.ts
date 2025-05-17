@@ -1,6 +1,5 @@
 // JsonParser.ts
 import { IParser } from "../../types"
-
 export class JsonParser implements IParser {
     
   parse(raw: string): any {
@@ -10,6 +9,7 @@ export class JsonParser implements IParser {
       .replace(/\n/g, "")
       .replace(/\\\"/g, '"')
       .trim();
+
     return JSON.parse(cleaned);
   }
 }

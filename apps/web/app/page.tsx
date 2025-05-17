@@ -5,11 +5,12 @@ export default async function Home() {
   let testDB;
   try {
     await connectDB();
+    await RoadmapModel.deleteMany();
     testDB = await RoadmapModel.find();
     const data = {
-      userPrompt: "Construct a roadmap for a beginner",
-      roadmapTitle: "Web Developer",
-      roadmapDuration: 180,
+      userPrompt: "Roadmap for a cracked Devops Engineer",
+      roadmapTitle: "Devops Engineer",
+      roadmapDuration: 100,
       owner: "Kunal"
     }
     await roadmapQueue.add('roadmapBuilder', data);
