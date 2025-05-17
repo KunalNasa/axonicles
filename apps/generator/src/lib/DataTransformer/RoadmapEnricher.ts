@@ -5,7 +5,7 @@ import { Roadmap } from "@axonicles/types/types";
 export class RoadmapEnricher implements IEnricher<Roadmap> {
 
   enrich(data: any, meta: EnrichmentMeta): Roadmap {
-    // console.log(data);
+
     const enriched : Roadmap = {
       title: meta.title,
       duration: meta.duration,

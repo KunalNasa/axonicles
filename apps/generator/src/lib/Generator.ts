@@ -19,7 +19,6 @@ export class Generator {
 
             const myprompt = promptConstructor.constructInitialPrompt(userPrompt, roadmapTitle, roadmapDuration);
             const geminiResponse = await gemini(myprompt);
-            console.log("Gemini Response", geminiResponse);
             try {
                 const transformer = new DataTransformer(
                     new JsonParser(),

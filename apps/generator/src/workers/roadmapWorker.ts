@@ -35,10 +35,10 @@ const jobHandler = async (job: Job) => {
         await connectDB();
         const saveRoadmap = await RoadmapModel.insertOne(finalRoadmapStruct);
         if (saveRoadmap) {
-            console.log("Roadmap saved");
+            generatorLogger.info("Roadmap saved to the DB successfully");
         }
     } catch (error) {
-        console.log("DB error occured", error);
+        generatorLogger.error("DB error occured", error);
 
     }
     const endTime = Date.now();
