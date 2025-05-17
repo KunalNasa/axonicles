@@ -1,5 +1,5 @@
 // JsonParser.ts
-import { IParser } from "../../types"
+import { IParser } from "../types"
 export class JsonParser implements IParser {
     
   parse(raw: string): any {

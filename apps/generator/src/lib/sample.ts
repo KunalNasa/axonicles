@@ -3,8 +3,8 @@ export const myRoadmap = {
   "duration": 180,
   "progress": 0,
   "generated_by": "Gemini",
-  "owner": "Kunal",
-  "superOwner": "Kunal",
+  "owner": "1234556",
+  "superOwner": "123456",
   "expectedDuration": 180,
   "tasks": [
     {

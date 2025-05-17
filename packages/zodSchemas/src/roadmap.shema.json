@@ -1,53 +1,84 @@
 {
-    "_id": "664238ea23caa5ae7d8c7f12",
-    "title": "Learn TypeScript from Scratch",
-    "duration": 30,
-    "expectedDuration": 28,
-    "tasks": [
-      {
-        "title": "Basics of TypeScript",
-        "duration": 5,
-        "subtopics": [
-          {
-            "title": "Variables and Types",
-            "resources": "https://www.typescriptlang.org/docs/handbook/variable-declarations.html",
-            "description": "Understand how variables work in TS and differences between let, const, var.",
-            "status": "Done"
-          },
-          {
-            "title": "Functions in TypeScript",
-            "resources": "https://www.typescriptlang.org/docs/handbook/functions.html",
-            "description": "Learn how to define functions, use default and rest parameters.",
-            "status": "In Progress"
-          }
-        ],
-        "is_completed": false,
-        "prerequisites": [],
-        "startDate": "2024-05-01T00:00:00.000Z",
-        "endDate": "2024-05-05T00:00:00.000Z"
-      },
-      {
-        "title": "Advanced TypeScript Concepts",
-        "duration": 7,
-        "subtopics": [
-          {
-            "title": "Generics",
-            "resources": "https://www.typescriptlang.org/docs/handbook/generics.html",
-            "description": "Learn how to create reusable components using generics.",
-            "status": "Is Pending"
-          }
-        ],
-        "is_completed": false,
-        "prerequisites": ["Basics of TypeScript"],
-        "startDate": "2024-05-06T00:00:00.000Z",
-        "endDate": "2024-05-12T00:00:00.000Z"
-      }
-    ],
-    "progress": 0,
-    "date_created": "2024-04-30T10:00:00.000Z",
-    "generated_by": "Gemini AI",
-    "owner": "user_abc123",
-    "superOwner": "admin_xyz789",
-    "__v": 0
+  "title": "Web Developer",
+  "duration": 180,
+  "progress": 0,
+  "generated_by": "Gemini",
+  "owner": "123456",
+  "superOwner": "123456",
+  "expectedDuration": 180,
+  "tasks": [
+    {
+      "title": "HTML Fundamentals",
+      "duration": 20,
+      "subtopics": [
+        {
+          "title": "Introduction to HTML",
+          "duration": 2,
+          "prerequisites": [],
+          "resources": "",
+          "description": "HTML, or HyperText Markup Language, is the standard markup language for creating web pages. It provides the structure and content of a webpage, using elements represented by tags.",
+          "status": "Pending"
+        },
+        {
+          "title": "Basic HTML Tags",
+          "duration": 3,
+          "prerequisites": ["Introduction to HTML"],
+          "resources": "",
+          "description": "These are the fundamental building blocks of an HTML document, including tags for defining the document structure (<html>, <head>, <body>), text formatting (<h1>-<h6>, <p>, <span>), and other essential elements.",
+          "status": "Pending"
+        },
+        {
+          "title": "HTML Attributes",
+          "duration": 2,
+          "prerequisites": ["Basic HTML Tags"],
+          "resources": "",
+          "description": "Attributes provide additional information about HTML elements. They are specified within the start tag and usually come in name-value pairs, like id, class, src, and href.",
+          "status": "Pending"
+        },
+        {
+          "title": "HTML Headings and Paragraphs",
+          "duration": 2,
+          "prerequisites": ["HTML Attributes"],
+          "resources": "",
+          "description": "Headings (<h1> to <h6>) define the titles and subtitles of a webpage, while paragraphs (<p>) are used to structure and present blocks of text content.",
+          "status": "Pending"
+        },
+        {
+          "title": "HTML Lists",
+          "duration": 2,
+          "prerequisites": ["HTML Headings and Paragraphs"],
+          "resources": "",
+          "description": "HTML offers ordered lists (<ol>), unordered lists (<ul>), and definition lists (<dl>) to present information in a structured and easily readable format.",
+          "status": "Pending"
+        },
+        {
+          "title": "HTML Images",
+          "duration": 2,
+          "prerequisites": ["HTML Lists"],
+          "resources": "",
+          "description": "The <img> tag is used to embed images into an HTML page. The 'src' attribute specifies the path to the image, and 'alt' provides alternative text if the image cannot be displayed.",
+          "status": "Pending"
+        },
+        {
+          "title": "HTML Links",
+          "duration": 3,
+          "prerequisites": ["HTML Images"],
+          "resources": "",
+          "description": "Links, created with the <a> tag, allow users to navigate between different pages or sections within a page. The 'href' attribute specifies the destination URL.",
+          "status": "Pending"
+        },
+        {
+          "title": "HTML Tables",
+          "duration": 4,
+          "prerequisites": ["HTML Links"],
+          "resources": "",
+          "description": "Tables, created with <table>, <tr> (table row), <th> (table header), and <td> (table data) tags, are used to organize data in rows and columns.",
+          "status": "Pending"
+        }
+      ],
+      "startDate": null,
+      "endDate": null,
+      "is_completed": false
+    }
+  ]
 }
-  

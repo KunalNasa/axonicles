@@ -1,6 +1,6 @@
 // DataTransformer.ts
 import { Roadmap } from "@axonicles/types/types";
-import { IParser, IValidator, IEnricher, EnrichmentMeta } from "../../types";
+import { IParser, IValidator, IEnricher, EnrichmentMeta } from "../types";
 import { RoadmapType } from "./RoadmapValidator";
 
 

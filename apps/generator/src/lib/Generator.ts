@@ -19,6 +19,7 @@ export class Generator {
 
             const myprompt = promptConstructor.constructInitialPrompt(userPrompt, roadmapTitle, roadmapDuration);
             const geminiResponse = await gemini(myprompt);
+            console.log("Gemini Response", geminiResponse);
             try {
                 const transformer = new DataTransformer(
                     new JsonParser(),
@@ -30,7 +31,6 @@ export class Generator {
                 break;
             } catch (error) {
                 logger.warn("Error occured while generating initial roadmap structure", error);
-                
             }
         }
         return finalRoadmapStruct;

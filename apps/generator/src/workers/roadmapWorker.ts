@@ -1,5 +1,5 @@
 import { Job, Worker } from "bullmq";
-import { queueMaps, RedisConnection } from "@axonicles/lib/lib";
+import { logger, queueMaps, RedisConnection } from "@axonicles/lib/lib";
 import dotenv from "dotenv"
 
 import { connectDB, RoadmapModel } from "@axonicles/db/dbClient";
@@ -11,6 +11,7 @@ import { generatorLogger } from "../lib/generatorLogger";
 dotenv.config();
 
 const jobHandler = async (job: Job) => {
+    const startTime = Date.now();
     const { userPrompt, roadmapTitle, roadmapDuration, owner } = job.data;
     const myGenerator = new Generator;
     let finalRoadmapStruct: Roadmap | null = null;
@@ -29,7 +30,7 @@ const jobHandler = async (job: Job) => {
         })
     });
     generatorLogger.info("Roadmap constructed successfully with all details.");
-    
+
     try {
         await connectDB();
         const saveRoadmap = await RoadmapModel.insertOne(finalRoadmapStruct);
@@ -40,8 +41,10 @@ const jobHandler = async (job: Job) => {
         console.log("DB error occured", error);
 
     }
-
+    const endTime = Date.now();
+    const diff = endTime - startTime;
+    logger.debug("Time Taken to complete job", diff);
 }
 
-export const worker = new Worker(queueMaps.roadmapQueue!, jobHandler, { connection: RedisConnection });
+export const worker = new Worker(queueMaps.roadmapQueue!, jobHandler, { connection: RedisConnection, removeOnComplete: {count : 0},  removeOnFail: { count: 100 } });
 

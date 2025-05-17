@@ -2,7 +2,7 @@
 import { RoadmapSchema } from "@axonicles/zod-schemas/zodSchemas";
 
 import type { z } from "zod";
-import { IValidator } from "../../types";
+import { IValidator } from "../types";
 import { generatorLogger } from "../generatorLogger";
 
 export type RoadmapType = z.infer<typeof RoadmapSchema>;
