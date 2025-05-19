@@ -1,7 +1,7 @@
 // server/context.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { CreateNextContextOptions } from "@trpc/server/adapters/next";
-import { getServerSession } from "next-auth"; // use this once NextAuth is added
+// import { getServerSession } from "next-auth"; // use this once NextAuth is added
 import {RoadmapModel} from "@axonicles/db/dbClient"
 
 type CreateInnerContextOptions = {
@@ -27,8 +27,8 @@ export const createContext = async (opts: CreateNextContextOptions) => {
   const { req, res } = opts;
 
   // Later when you add next-auth:
-  const session = await getServerSession(req, res, authOptions);
-//   const session = null; // Placeholder for now
+//   const session = await getServerSession(req, res, authOptions);
+  const session = null; // Placeholder for now
 
   const innerContext = await createContextInner({ session });
 

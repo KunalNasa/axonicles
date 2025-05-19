@@ -7,6 +7,7 @@ import { createContextInner } from "./trpcContext";
 export const tRPCContext = initTRPC.context<typeof createContextInner>().create({
   errorFormatter,
 });
+// export const tRPCContext = initTRPC.create();
 
 export const router = tRPCContext.router;
 export const mergeRouters = tRPCContext.mergeRouters;

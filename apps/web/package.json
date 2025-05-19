@@ -12,13 +12,20 @@
   },
   "dependencies": {
     "@axonicles/ui": "*",
+    "@tanstack/react-query": "^5.76.1",
+    "@trpc/client": "^11.1.2",
+    "@trpc/react-query": "^11.1.2",
+    "@trpc/server": "^11.1.2",
+    "client-only": "^0.0.1",
     "next": "^15.3.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "server-only": "^0.0.1",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
-    "@axonicles/eslint-config": "*",
     "@axonicles/db": "*",
+    "@axonicles/eslint-config": "*",
     "@axonicles/lib": "*",
     "@axonicles/queues": "*",
     "@axonicles/typescript-config": "*",

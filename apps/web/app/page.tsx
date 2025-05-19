@@ -1,7 +1,11 @@
 import { RoadmapModel, connectDB } from "@axonicles/db/dbClient"
 import {roadmapQueue} from "@axonicles/queues/queues"
+import TodoList from "../components/TodoList"
+import { serverClient } from "./_trpc/server";
+
 
 export default async function Home() {
+  const todos = await serverClient.getTodos();
   let testDB;
   try {
     await connectDB();
@@ -13,7 +17,7 @@ export default async function Home() {
       roadmapDuration: 100,
       owner: "Kunal"
     }
-    await roadmapQueue.add('roadmapBuilder', data);
+    // await roadmapQueue.add('roadmapBuilder', data);
   } catch (error:any) {
     console.log("Failed to connect DB", error.message);
   }
@@ -21,7 +25,9 @@ export default async function Home() {
 
   return (
     <div>
+      {JSON.stringify(todos)};
       {JSON.stringify(testDB)};
+      <TodoList/>
     </div>
   );
 }

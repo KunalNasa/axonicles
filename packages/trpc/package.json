@@ -4,11 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "exports": {
-    "./trpc": "./src/index.ts"
+    "./trpc": "./index.ts"
   },
   "dependencies": {
     "@trpc/client": "^11.1.2",
     "@trpc/server": "^11.1.2",
-    "next-auth": "^4.24.11"
+    "next-auth": "^4.24.11",
+    "superjson": "^2.2.2"
   }
 }

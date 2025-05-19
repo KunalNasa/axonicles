@@ -1,4 +1,5 @@
 import { Schema } from "mongoose";
+import { Subtopic } from "@axonicles/types/types";
 
 export const subtopicStatusEnum = {
     done: "Done",
@@ -6,7 +7,7 @@ export const subtopicStatusEnum = {
     Pending: "Pending"
 }
 
-export const subtopicSchema = new Schema({
+export const subtopicSchema = new Schema<Subtopic>({
     title: {
       type: String,
       required: [true, "Subtopic title is required"],
