@@ -1,30 +1,29 @@
-// dbClient.ts
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import mongoose from "mongoose";
 
 type ConnectionObject = {
   isConnected?: number;
-  client?: any;
+  db?: any
 };
 
-const connection: ConnectionObject = {};
+const conn: ConnectionObject = {};
 
 async function connectDB(): Promise<any> {
-  if (connection.isConnected) {
-    return connection.client;
-  }
+  if (conn.isConnected) return;
 
   try {
     const db = await mongoose.connect(process.env.MONGODB_URI as string);
-    connection.isConnected = db.connections[0]?.readyState ?? 0;
-    const client = mongoose.connection.getClient();
-    connection.client = client;
-
+    conn.isConnected = db.connections[0]?.readyState ?? 0;
+    conn.db = db;
     console.log("DB connected successfully");
-    return client;
   } catch (error) {
-    console.log("DB connection failed", error);
+    console.error("DB connection failed", error);
     process.exit(1);
   }
 }
 
-export { connectDB, connection };
+async function  getClientNative() {
+  await connectDB();
+  return conn.db.connection.db;
+}
+export { connectDB, getClientNative };

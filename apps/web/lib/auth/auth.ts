@@ -1,15 +1,18 @@
 // auth.ts
-import { connectDB } from "@axonicles/db/dbClient";
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import {getClientNative} from "@axonicles/db/dbClient"
 
 let authInstance: ReturnType<typeof betterAuth> | null = null;
 
 export const getAuth = async () => {
   if (!authInstance) {
-    const client = await connectDB();
     authInstance = betterAuth({
-      database: mongodbAdapter(client),
+      emailAndPassword: {  
+        enabled: true
+    },
+    database: mongodbAdapter(await getClientNative()),
+
     });
   }
   return authInstance;

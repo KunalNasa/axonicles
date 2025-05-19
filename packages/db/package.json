@@ -10,5 +10,8 @@
     "@axonicles/types": "*",
     "dotenv": "^16.5.0",
     "mongoose": "^8.14.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.19"
   }
 }

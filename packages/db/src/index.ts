@@ -1,7 +1,7 @@
 import { RoadmapModel } from "./models/roadmap.model";
 import { UserModel } from "./models/user.model"
 
-import {connectDB, connection} from "./connection/db";
+import {connectDB, getClientNative} from "./connection/db";
 
-export { RoadmapModel, connectDB, UserModel, connection }
+export { RoadmapModel, connectDB, UserModel, getClientNative }
 

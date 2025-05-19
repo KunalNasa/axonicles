@@ -1,11 +1,7 @@
 import { RoadmapModel, connectDB } from "@axonicles/db/dbClient"
 import {roadmapQueue} from "@axonicles/queues/queues"
-import TodoList from "../components/TodoList"
-import { serverClient } from "./_trpc/server";
-
 
 export default async function Home() {
-  const todos = await serverClient.getTodos();
   let testDB;
   try {
     await connectDB();
@@ -25,9 +21,7 @@ export default async function Home() {
 
   return (
     <div>
-      {JSON.stringify(todos)};
       {JSON.stringify(testDB)};
-      <TodoList/>
     </div>
   );
 }

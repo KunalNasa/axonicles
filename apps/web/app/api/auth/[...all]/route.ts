@@ -1,4 +1,6 @@
-import { auth } from "@axonicles/lib/lib"; // path to your auth file
+
 import { toNextJsHandler } from "better-auth/next-js";
- 
-export const { POST, GET } = toNextJsHandler(auth);
+import { getAuth } from "../../../../lib/auth/auth";
+
+
+export const { POST, GET } = toNextJsHandler(await getAuth());
