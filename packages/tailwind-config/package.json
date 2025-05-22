@@ -1,0 +1,30 @@
+{
+  "name": "@axonicles/tailwind-config",
+  "version": "0.0.0",
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./theme.css": "./theme.css",
+    "./styles.css": "./styles.css"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@axonicles/eslint-config": "*",
+    "@axonicles/typescript-config": "*",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.12",
+    "@tailwindcss/postcss": "^4.0.12",
+    "class-variance-authority": "^0.7.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.12"
+  }
+}

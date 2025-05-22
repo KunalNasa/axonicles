@@ -1,7 +1,7 @@
 'use client'
 
 import { authClient } from "../../lib/auth/auth-client";
-import { signup } from "../../lib/signup";
+import { signup } from "../../helpers/signup";
 
 export default function page() {
     const { 
@@ -12,13 +12,18 @@ export default function page() {
     } = authClient.useSession();
 
     const handleSignup = async () => {
-        const email = "abcde@gmail.com", password = "K@123456", name = "kunal", image = "12345";
+        const email = "asslikethis@gmail.com", password = "K@123456", name = "kunal", image = "12345";
         const {data, error} = await signup(email, password, name, image);
+    }
+
+    const handleLogout = async () => {
+      await authClient.signOut();
     }
   return (
     <div>
         <button onClick={handleSignup}>Click me</button>  
         {session ? <p>There is session</p> : <p>No session</p>}
+        <button onClick={handleLogout}>Log Out</button>
     </div>
   );
 }

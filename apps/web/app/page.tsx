@@ -20,7 +20,8 @@ export default async function Home() {
  
 
   return (
-    <div>
+    <div className="bg-red-500">
+      <p className="text-green-500">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At enim aspernatur nesciunt quis quaerat nemo officiis deleniti veniam nobis. Sunt possimus voluptate dolor ad facilis porro laboriosam nostrum quisquam tempore?</p>
       {JSON.stringify(testDB)};
     </div>
   );

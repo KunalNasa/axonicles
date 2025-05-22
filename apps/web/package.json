@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@axonicles/ui": "*",
+    "@axonicles/tailwind-config": "*",
     "@tanstack/react-query": "^5.76.1",
     "better-auth": "^1.2.8",
     "client-only": "^0.0.1",

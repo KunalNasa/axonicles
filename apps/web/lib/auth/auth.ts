@@ -11,6 +11,19 @@ export const getAuth = async () => {
       emailAndPassword: {  
         enabled: true
     },
+    user: {
+      modelName: "users",
+      fields: {
+        name: "full_name",
+        email: "email_address",
+      },
+    },
+    session: {
+      modelName: "user_sessions",
+      fields: {
+        userId: "user_id",
+      },
+    },
     database: mongodbAdapter(await getClientNative()),
 
     });
