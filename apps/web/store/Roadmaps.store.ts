@@ -6,7 +6,7 @@ export interface RoadmapsStoreInterface {
     setRoadmaps: (roadmaps: Roadmap[]) => void
 }
 
-export const useRoadmapsStore = create<RoadmapsStoreInterface>((set) => ({
+export const RoadmapsStore = create<RoadmapsStoreInterface>((set) => ({
     roadmaps: [],
     setRoadmaps: (roadmaps) => set({ roadmaps: roadmaps })
 }));

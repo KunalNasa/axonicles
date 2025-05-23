@@ -8,22 +8,24 @@ import {FormField} from "@axonicles/ui/FormField"
 import {Input} from "@axonicles/ui/Input"
 import { IoMdSearch } from "react-icons/io";
 import useDebounce from "../../hooks/useDebounce";
-import { useRoadmapsStore } from "../../store/Roadmaps.store";
+import { RoadmapsStore } from "../../store/Roadmaps.store";
+import { useEffect } from "react"
 
 export default function UserRoadmapsSearch() {
+  const {setRoadmaps} = RoadmapsStore();
     const searchForm = useForm<z.infer<typeof searchSchema>>({
         resolver: zodResolver(searchSchema),
         defaultValues: {
             searchString: ""
         }
     })
-    const {setRoadmaps} = useRoadmapsStore();
-
+    
     const searchValue = useWatch({
       control: searchForm.control,
       name: "searchString",
     });
-
+    
+    // refetch roadmaps on change of query string
     useDebounce({
       value: searchValue,
       interval: 500, // 500ms debounce
