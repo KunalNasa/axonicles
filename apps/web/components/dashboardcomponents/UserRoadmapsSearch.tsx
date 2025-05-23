@@ -2,12 +2,13 @@
 import {useForm, useWatch} from "react-hook-form"
 import {searchSchema} from "@axonicles/zod-schemas/zodSchemas"
 import {z} from "zod"
+import { sampleRoadmap } from "@axonicles/lib/lib"
 import { zodResolver } from '@hookform/resolvers/zod'; 
 import {FormField} from "@axonicles/ui/FormField"
 import {Input} from "@axonicles/ui/Input"
 import { IoMdSearch } from "react-icons/io";
 import useDebounce from "../../hooks/useDebounce";
-
+import { useRoadmapsStore } from "../../store/Roadmaps.store";
 
 export default function UserRoadmapsSearch() {
     const searchForm = useForm<z.infer<typeof searchSchema>>({
@@ -16,6 +17,7 @@ export default function UserRoadmapsSearch() {
             searchString: ""
         }
     })
+    const {setRoadmaps} = useRoadmapsStore();
 
     const searchValue = useWatch({
       control: searchForm.control,
@@ -27,7 +29,9 @@ export default function UserRoadmapsSearch() {
       interval: 500, // 500ms debounce
       callback: (debouncedVal) => {
         // API/search logic here
+        setRoadmaps([sampleRoadmap]);
         console.log("Debounced search string:", debouncedVal);
+        
       }
     });
   
@@ -40,7 +44,7 @@ export default function UserRoadmapsSearch() {
       errors={searchForm.formState.errors}
       >
         <div className="relative">
-        <Input className="pl-7 pr-3" {...searchForm.register("searchString")} placeholder="Search your roadmaps..." variant="primary" />
+        <Input variant="search" className="pl-7 pr-3 w-1/3" {...searchForm.register("searchString")} placeholder="Search your roadmaps..."  />
         <span className="absolute text-gray-400 left-2 top-2"><IoMdSearch/></span>
         </div>
       </FormField>

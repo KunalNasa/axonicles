@@ -16,7 +16,7 @@ export default function RootLayout({
         <div >
             <Sidebar/>
         </div>
-        <div className="w-fit p-7 overflow-y-scroll max-h-screen">
+        <div className="w-full p-7 overflow-y-scroll max-h-screen">
             {children}
         </div>
     </div>

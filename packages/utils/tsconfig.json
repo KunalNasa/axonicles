@@ -1,6 +1,5 @@
 {
     "extends": "@axonicles/typescript-config/react-library.json",
-    "include": ["./"],
+    "include": ["."],
     "exclude": ["dist", "build", "node_modules"]
-}
-  
+  }
