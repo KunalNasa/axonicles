@@ -1,4 +1,6 @@
-export const myRoadmap = {
+import {Roadmap} from "@axonicles/types/types"
+export const sampleRoadmap:Roadmap = {
+  _id: "123456",
   "title": "Web Developer",
   "duration": 180,
   "progress": 0,

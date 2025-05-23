@@ -2,7 +2,7 @@ import { Subtopic } from "./subtopics.type";
 
 // Task interface
 export interface Task {
-    _id: string; // Unique task ID
+    // _id: string; // Unique task ID
     title: string; // Task title
     duration: number; // Duration of the task (in hours/days)
     subtopics: Subtopic[]; // Subtopics covered

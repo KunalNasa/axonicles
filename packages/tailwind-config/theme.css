@@ -41,17 +41,21 @@
   :root {
     --theme-color-primary: var(--color-primary-500);
     --theme-color-secondary: var(--color-secondary-500);
+    --theme-color-tertiary: rgb(240, 240, 240);
 
-    --theme-color-text: var(--color-slate-800);
-    --theme-color-background: var(--color-slate-200);
+    --theme-color-text: var(--color-gray-800);
+    --theme-color-background: var(--color-gray-200);
   }
 
   [data-theme="dark"] {
     --theme-color-primary: var(--color-primary-400);
     --theme-color-secondary: var(--color-secondary-400);
+    --theme-color-tertiary: rgb(35, 35, 35);
+
+
 
     --theme-color-text: var(--color-slate-50);
-    --theme-color-background: var(--color-slate-900);
+    --theme-color-background: var(--color-black);
   }
 }
 

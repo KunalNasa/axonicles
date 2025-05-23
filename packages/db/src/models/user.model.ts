@@ -47,11 +47,7 @@ const UserSchema: Schema<User> = new Schema({
   profile_picture: {
     type: String,
     default: "",
-  },
-  roadmaps: {
-    type: [RoadmapSchema],
-    default: [],
-  },
+  }
 });
 
 // Exporting User model

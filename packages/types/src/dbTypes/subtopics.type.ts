@@ -3,7 +3,7 @@ export interface Subtopic {
     resources?: string;
     description?: string;
     duration?: number;
-    status?: "Done" | "In Progress" | "Is Pending";
+    status?: "Done" | "In Progress" | "Pending";
     prerequisites?: string[];
   }
   

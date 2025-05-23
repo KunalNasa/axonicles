@@ -58,7 +58,7 @@ describe("generateDescriptions", () => {
             prerequisites: [],
             description: "",
             resources: "",
-            status: "Is Pending"
+            status: "Pending"
           }
         ]
       }))

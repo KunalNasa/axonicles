@@ -29,10 +29,12 @@ export const RoadmapSchema = new Schema<Roadmap>({
   },
   owner: {
     type: String,
-    required: [true, "Owner must be mentioned"]
+    ref: "User",
+    required : [true, "Owner must be mentioned"]
   },
   superOwner: {
     type: String,
+    ref: "User",
     required : [true, "Super owner must be mentioned"]
   },
   expectedDuration : {
