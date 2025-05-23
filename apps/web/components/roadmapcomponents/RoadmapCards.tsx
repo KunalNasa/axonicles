@@ -1,5 +1,5 @@
 'use client'
-import { Roadmap } from "@axonicles/types/types";
+import { Roadmap } from "@axonicles/types/index";
 import { CgGoogleTasks } from "react-icons/cg";
 import { GiDuration } from "react-icons/gi";
 import {CircularProgress} from "@axonicles/ui/CircularProgress"

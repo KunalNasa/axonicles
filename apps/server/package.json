@@ -10,7 +10,6 @@
     "build": "tsc -b"
   },
   "dependencies": {
-    "tsup": "6.6.3",
     "better-auth": "^1.2.8",
     "@axonicles/db": "*",
     "dotenv": "^16.5.0",

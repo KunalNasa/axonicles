@@ -1,0 +1,1 @@
+{"root":["./src/geminiconnection.ts","./src/index.ts","./src/logger.ts","./src/queuemaps.ts","./src/redisconnection.ts","./src/sample.ts"],"version":"5.8.2"}

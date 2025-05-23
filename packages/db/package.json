@@ -1,7 +1,15 @@
 {
   "name": "@axonicles/db",
   "exports": {
-    "./dbClient": "./src/index.ts"
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "jest --coverage",
+    "dev": "tsc src/index.ts"
   },
   "version": "1.0.0",
   "main": "index.js",

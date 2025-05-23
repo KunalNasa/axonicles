@@ -1,9 +1,9 @@
-import { RoadmapModel, connectDB } from "@axonicles/db/dbClient"
-import { Roadmap } from "@axonicles/types/types";
+import { RoadmapModel, connectDB } from "@axonicles/db/index"
+import { Roadmap } from "@axonicles/types/index";
 // import {roadmapQueue} from "@axonicles/queues/queues"
 import "@axonicles/tailwind-config/styles.css"
 import "@axonicles/ui/styles.css"
-import { sampleRoadmap } from "@axonicles/lib/lib";
+import { sampleRoadmap } from "@axonicles/lib/index";
 
 export default async function Home() {
   let testDB;

@@ -1,7 +1,15 @@
 {
   "name": "@axonicles/lib",
   "exports": {
-    "./lib": "./src/index.ts"
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "jest --coverage",
+    "dev": "tsc src/index.ts"
   },
   "description": "Shared library for Axonicles. Contains all the shared code used in Axonicles.",
   "version": "1.0.0",

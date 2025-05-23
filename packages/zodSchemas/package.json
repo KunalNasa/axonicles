@@ -1,7 +1,15 @@
 {
   "name": "@axonicles/zod-schemas",
   "exports": {
-    "./zodSchemas": "./src/index.ts"
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "jest --coverage",
+    "dev": "tsc src/index.ts"
   },
   "description": "Contains all the shared schemas used in Axonicles. Mostly zod schemas.",
   "version": "1.0.0",

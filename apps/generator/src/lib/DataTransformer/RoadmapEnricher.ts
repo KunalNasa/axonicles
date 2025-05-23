@@ -1,6 +1,6 @@
 // RoadmapEnricher.ts
 import { IEnricher, EnrichmentMeta } from "../types";
-import { Roadmap } from "@axonicles/types/types";
+import { Roadmap } from "@axonicles/types/index";
 
 export class RoadmapEnricher implements IEnricher<Roadmap> {
 

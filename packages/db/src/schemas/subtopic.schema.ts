@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { Subtopic } from "@axonicles/types/types";
+import { Subtopic } from "@axonicles/types/index";
 
 export const subtopicStatusEnum = {
     done: "Done",

@@ -1,5 +1,5 @@
 // RoadmapValidator.ts
-import { RoadmapSchema } from "@axonicles/zod-schemas/zodSchemas";
+import { RoadmapSchema } from "@axonicles/zod-schemas/index";
 
 import type { z } from "zod";
 import { IValidator } from "../types";

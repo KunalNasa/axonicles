@@ -3,12 +3,20 @@
     "version": "1.0.0",
     "private": true,
     "exports": {
-      "./cn": "./src/cn.ts"
+      "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
     },
     "dependencies": {
       "clsx": "^2.1.1",
       "tailwind-merge": "^3.0.2"
     },
+    "scripts": {
+    "build": "tsc -b",
+    "test": "jest --coverage",
+    "dev": "tsc src/index.ts"
+  },
     "devDependencies": {
       "@axonicles/eslint-config": "*",
       "@axonicles/typescript-config": "*",

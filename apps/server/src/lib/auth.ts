@@ -1,7 +1,7 @@
 // auth.ts
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import {getClientNative} from "@axonicles/db/dbClient"
+import {getClientNative} from "@axonicles/db/connection/db"
 
 let authInstance: ReturnType<typeof betterAuth> | null = null;
 

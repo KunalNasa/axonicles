@@ -1,4 +1,4 @@
-import { Task } from "@axonicles/types/types";
+import { Task } from "@axonicles/types/index";
 import { Schema } from "mongoose";
 import { subtopicSchema } from "./subtopic.schema";
 

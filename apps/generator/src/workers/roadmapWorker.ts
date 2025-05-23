@@ -1,9 +1,9 @@
 import { Job, Worker } from "bullmq";
-import { logger, queueMaps, RedisConnection } from "@axonicles/lib/lib";
+import { logger, queueMaps, RedisConnection } from "@axonicles/lib/index";
 import dotenv from "dotenv"
 
-import { connectDB, RoadmapModel } from "@axonicles/db/dbClient";
-import { Roadmap } from "@axonicles/types/types";
+import { connectDB, RoadmapModel } from "@axonicles/db/index";
+import { Roadmap } from "@axonicles/types/index";
 import { Generator } from "../lib/Generator";
 import { generatorLogger } from "../lib/generatorLogger";
 

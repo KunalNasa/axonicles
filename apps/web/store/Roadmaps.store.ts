@@ -1,4 +1,4 @@
-import { Roadmap } from "@axonicles/types/types";
+import { Roadmap } from "@axonicles/types/index";
 import { create } from "zustand";
 
 export interface RoadmapsStoreInterface {

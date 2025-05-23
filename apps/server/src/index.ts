@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import dotenv from "dotenv";
-import { connectDB } from "@axonicles/db/dbClient";
+import {connectDB} from "@axonicles/db/connection/db";
 import { toNodeHandler } from "better-auth/node";
 import { getAuth } from "./lib/auth";
 

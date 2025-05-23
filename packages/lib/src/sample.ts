@@ -1,4 +1,4 @@
-import {Roadmap} from "@axonicles/types/types"
+import {Roadmap} from "@axonicles/types/index"
 export const sampleRoadmap:Roadmap = {
   _id: "123456",
   "title": "Web Developer",

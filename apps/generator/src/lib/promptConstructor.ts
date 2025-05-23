@@ -1,4 +1,4 @@
-import { Task } from "@axonicles/types/types";
+import { Task } from "@axonicles/types/index";
 import { FIXED_ROADMAP_PROMPT, INITIAL_MESSAGE, NOTES_FOR_STRUCTURE } from "./config";
 
 export class PromptConstruct {

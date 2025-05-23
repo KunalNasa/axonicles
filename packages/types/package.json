@@ -5,6 +5,14 @@
   "main": "index.js",
   "license": "MIT",
   "exports" :{
-    "./types" : "./src/index.ts"
+   "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "jest --coverage",
+    "dev": "tsc src/index.ts"
   }
 }

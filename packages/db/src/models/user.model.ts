@@ -1,7 +1,6 @@
 
 import mongoose, { Schema } from "mongoose";
-import { RoadmapSchema } from "./roadmap.model";
-import { User } from "@axonicles/types/types";
+import { User } from "@axonicles/types/index";
 
 
 

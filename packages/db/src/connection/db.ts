@@ -1,6 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import mongoose from "mongoose";
 
+// be extra safe here for configs
+import dotenv from "dotenv"
+
+dotenv.config();
 type ConnectionObject = {
   isConnected?: number;
   db?: any

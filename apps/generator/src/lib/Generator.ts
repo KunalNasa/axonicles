@@ -1,11 +1,11 @@
-import { gemini } from "@axonicles/lib/lib";
+import { gemini } from "@axonicles/lib/index";
 import { PromptConstruct } from "./promptConstructor";
 import { JsonParser } from "./DataTransformer/JsonParser";
 import { DataTransformer } from "./DataTransformer/DataTransformer";
 import { RoadmapValidator } from "./DataTransformer/RoadmapValidator";
 import { RoadmapEnricher } from "./DataTransformer/RoadmapEnricher";
-import { Roadmap } from "@axonicles/types/types";
-import { subtopicDescriptionSchema } from "@axonicles/zod-schemas/zodSchemas";
+import { Roadmap } from "@axonicles/types/index";
+import { subtopicDescriptionSchema } from "@axonicles/zod-schemas/index";
 import { generatorLogger as logger } from "./generatorLogger";
 
 export class Generator {

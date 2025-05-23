@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import RoadmapCards from "../roadmapcomponents/RoadmapCards";
 import { RoadmapsStore } from "../../store/Roadmaps.store";
-import { Roadmap } from "@axonicles/types/types";
+import { Roadmap } from "@axonicles/types/index";
 
 export default function DashboardUserRoadmaps() {
   const { roadmaps, setRoadmaps } = RoadmapsStore();

@@ -1,5 +1,7 @@
 {
-    "extends": "@axonicles/typescript-config/react-library.json",
-    "include": ["."],
-    "exclude": ["dist", "build", "node_modules"]
+  "extends" : "@axonicles/typescript-config/base.json",
+  "compilerOptions": {
+      "outDir": "./dist",
+      "rootDir": "./src"
   }
+}

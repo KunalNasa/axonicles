@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import { Roadmap } from "@axonicles/types/types"
+import { Roadmap } from "@axonicles/types/index"
 import { TaskSchema } from "../schemas/task.schema";
 
 
