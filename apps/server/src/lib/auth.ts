@@ -8,21 +8,12 @@ let authInstance: ReturnType<typeof betterAuth> | null = null;
 export const getAuth = async () => {
   if (!authInstance) {
     authInstance = betterAuth({
+      baseURL: "http://localhost:8080",
+      trustedOrigins: [
+        "http://localhost:3000",
+      ],
       emailAndPassword: {  
         enabled: true
-    },
-    user: {
-      modelName: "users",
-      fields: {
-        name: "full_name",
-        email: "email_address",
-      },
-    },
-    session: {
-      modelName: "user_sessions",
-      fields: {
-        userId: "user_id",
-      },
     },
     database: mongodbAdapter(await getClientNative()),
 
