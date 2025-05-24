@@ -8,6 +8,9 @@ export const sampleRoadmap:Roadmap = {
   "owner": "1234556",
   "superOwner": "123456",
   "expectedDuration": 180,
+  keywords: [],
+  description: "Become a full stack web developer in 180 days.",
+  starCount: 0,
   "tasks": [
     {
       "title": "HTML Fundamentals",

@@ -1,10 +1,11 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Mongoose, Schema } from "mongoose";
 import { Roadmap } from "@axonicles/types/index"
 import { TaskSchema } from "../schemas/task.schema";
 
 
 
 // Roadmap Schema
+// ideally it should be in schemas folder but fine for now.
 export const RoadmapSchema = new Schema<Roadmap>({
   title: {
     type: String,
@@ -28,18 +29,34 @@ export const RoadmapSchema = new Schema<Roadmap>({
     default: "Gemini AI",
   },
   owner: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required : [true, "Owner must be mentioned"]
   },
   superOwner: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required : [true, "Super owner must be mentioned"]
   },
   expectedDuration : {
     type: Number,
     required: [true, "Must mention expected duration"]
+  },
+  description: {
+    type : String,
+    required: [true, "Please add a valid description for a roadmap"]
+  },
+  keywords: {
+    type:  [String],
+    default: []
+  },
+  startDate: {
+    type : Date,
+    default: null
+  },
+  starCount: {
+    type: Number,
+    default: 0
   }
 }, {
   timestamps : true

@@ -30,6 +30,10 @@ export const TaskSchema = new Schema<Task>({
   endDate : {
     type : Date,
     default: null
+  },
+  progress: {
+    type: Number,
+    default: 0
   }
 });
 

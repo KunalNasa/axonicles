@@ -9,13 +9,13 @@ export async function signup(email: string, password: string, name: string, imag
         image, // User image URL (optional)
         callbackURL: "/dashboard" // A URL to redirect to after the user verifies their email (optional)
     }, {
-        onRequest: (ctx) => {
+        onRequest: (ctx : any) => {
             //show loading
         },
-        onSuccess: (ctx) => {
+        onSuccess: (ctx: any) => {
             //redirect to the dashboard or sign in page
         },
-        onError: (ctx) => {
+        onError: (ctx: any) => {
             // display the error message
             alert(ctx.error.message);
         },

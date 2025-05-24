@@ -10,4 +10,5 @@ export interface Task {
     // prerequisites: string[]; // Prerequisites
     startDate? : Date | null // when user has started this task
     endDate?: Date | null // When this roadmap should be completed by user.
+    progress?: Number
 }
