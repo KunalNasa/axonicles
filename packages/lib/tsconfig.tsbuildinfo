@@ -1,1 +1,1 @@
-{"root":["./src/errorresponse.ts","./src/geminiconnection.ts","./src/index.ts","./src/logger.ts","./src/queuemaps.ts","./src/redisconnection.ts","./src/sample.ts"],"version":"5.8.2"}
+{"root":["./src/apiresponse.ts","./src/errorresponse.ts","./src/geminiconnection.ts","./src/index.ts","./src/logger.ts","./src/myqueues.ts","./src/queuemaps.ts","./src/redisconnection.ts","./src/sample.ts"],"version":"5.8.2"}

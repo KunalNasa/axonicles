@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@axonicles/db": "*",
+    "@axonicles/lib": "*",
+    "@axonicles/zod-schemas": "*",
     "better-auth": "^1.2.8",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",

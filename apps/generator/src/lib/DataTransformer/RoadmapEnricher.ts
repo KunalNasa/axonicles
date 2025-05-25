@@ -14,18 +14,21 @@ export class RoadmapEnricher implements IEnricher<Roadmap> {
       owner: meta.owner,
       superOwner: meta.owner,
       expectedDuration: meta.duration,
-      tasks: data.map((task:any) => ({
+      tasks: data.map((task: any) => ({
         ...task,
-        startDate : null,
+        startDate: null,
         endDate: null,
         is_completed: false,
-        subtopics: task.subtopics.map((sub:any) => ({
+        subtopics: task.subtopics.map((sub: any) => ({
           ...sub,
           resources: "",
           description: "",
           status: "Pending",
         })),
       })),
+      description: "",
+      keywords: [],
+      starCount: 0
     };
     
     return enriched;

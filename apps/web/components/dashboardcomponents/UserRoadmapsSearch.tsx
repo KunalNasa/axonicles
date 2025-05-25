@@ -9,7 +9,6 @@ import {Input} from "@axonicles/ui/Input"
 import { IoMdSearch } from "react-icons/io";
 import useDebounce from "../../hooks/useDebounce";
 import { RoadmapsStore } from "../../store/Roadmaps.store";
-import { useEffect } from "react"
 
 export default function UserRoadmapsSearch() {
   const {setRoadmaps} = RoadmapsStore();

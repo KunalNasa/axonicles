@@ -11,12 +11,13 @@ import { generatorLogger } from "../lib/generatorLogger";
 dotenv.config();
 
 const jobHandler = async (job: Job) => {
+    console.log("Worker called");
     const startTime = Date.now();
-    const { userPrompt, roadmapTitle, roadmapDuration, owner } = job.data;
+    const { prompt, title, duration, userId } = job.data;
     const myGenerator = new Generator;
     let finalRoadmapStruct: Roadmap | null = null;
     try {
-        finalRoadmapStruct = await myGenerator.generateRoadmapStructure(userPrompt, roadmapTitle, roadmapDuration, owner);
+        finalRoadmapStruct = await myGenerator.generateRoadmapStructure(prompt, title, duration, userId);
     } catch (error: any) {
         generatorLogger.warn("Failed to generate final roadmap structure", error);
         throw new Error(error.message);
