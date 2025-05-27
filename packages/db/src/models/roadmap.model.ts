@@ -42,6 +42,7 @@ export const RoadmapSchema = new Schema<Roadmap>({
     type: Number,
     required: [true, "Must mention expected duration"]
   },
+  // or prompt
   description: {
     type : String,
     required: [true, "Please add a valid description for a roadmap"]

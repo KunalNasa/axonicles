@@ -1,6 +1,6 @@
 // middleware/errorHandler.ts
 import { Request, Response, NextFunction, ErrorRequestHandler } from "express";
-import {AppError} from "@axonicles/lib/index"
+import {AppError} from "@axonicles/lib/ErrorResponse"
 
 
 export const errorHandler = (

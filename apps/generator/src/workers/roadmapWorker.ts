@@ -1,5 +1,7 @@
 import { Job, Worker } from "bullmq";
-import { logger, queueMaps, RedisConnection } from "@axonicles/lib/index";
+import { RedisConnection } from "@axonicles/lib/redisConnection";
+import logger from "@axonicles/lib/logger";
+import {queueMaps} from "@axonicles/lib/queueMaps"
 import dotenv from "dotenv"
 
 import { connectDB, RoadmapModel } from "@axonicles/db/index";
@@ -13,11 +15,11 @@ dotenv.config();
 const jobHandler = async (job: Job) => {
     console.log("Worker called");
     const startTime = Date.now();
-    const { prompt, title, duration, userId } = job.data;
+    const { description, title, duration, userId } = job.data;
     const myGenerator = new Generator;
     let finalRoadmapStruct: Roadmap | null = null;
     try {
-        finalRoadmapStruct = await myGenerator.generateRoadmapStructure(prompt, title, duration, userId);
+        finalRoadmapStruct = await myGenerator.generateRoadmapStructure(description, title, duration, userId);
     } catch (error: any) {
         generatorLogger.warn("Failed to generate final roadmap structure", error);
         throw new Error(error.message);

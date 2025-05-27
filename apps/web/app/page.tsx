@@ -1,18 +1,10 @@
-import { RoadmapModel, connectDB } from "@axonicles/db/index"
+
 import { Roadmap } from "@axonicles/types/index";
 import "@axonicles/tailwind-config/styles.css"
 import "@axonicles/ui/styles.css"
-import { sampleRoadmap } from "@axonicles/lib/index";
+import { sampleRoadmap } from "@axonicles/lib/sample";
 
 export default async function Home() {
-  let testDB;
-  try {
-    await connectDB();
-    await RoadmapModel.deleteMany();
-    testDB = await RoadmapModel.find();
-  } catch (error:any) {
-    console.log("Failed to connect DB", error.message);
-  }
 
   const roadmap: Roadmap = sampleRoadmap;
  

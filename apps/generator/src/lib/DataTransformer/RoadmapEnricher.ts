@@ -5,7 +5,6 @@ import { Roadmap } from "@axonicles/types/index";
 export class RoadmapEnricher implements IEnricher<Roadmap> {
 
   enrich(data: any, meta: EnrichmentMeta): Roadmap {
-
     const enriched : Roadmap = {
       title: meta.title,
       duration: meta.duration,
@@ -26,7 +25,7 @@ export class RoadmapEnricher implements IEnricher<Roadmap> {
           status: "Pending",
         })),
       })),
-      description: "",
+      description: meta.description,
       keywords: [],
       starCount: 0
     };

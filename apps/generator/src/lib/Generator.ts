@@ -1,4 +1,4 @@
-import { gemini } from "@axonicles/lib/index";
+import { gemini } from "@axonicles/lib/geminiConnection";
 import { PromptConstruct } from "./promptConstructor";
 import { JsonParser } from "./DataTransformer/JsonParser";
 import { DataTransformer } from "./DataTransformer/DataTransformer";
@@ -9,7 +9,7 @@ import { subtopicDescriptionSchema } from "@axonicles/zod-schemas/index";
 import { generatorLogger as logger } from "./generatorLogger";
 
 export class Generator {
-    public async generateRoadmapStructure(userPrompt: string, roadmapTitle: string, roadmapDuration: number, owner: string): Promise<Roadmap | null> {
+    public async generateRoadmapStructure(description: string, roadmapTitle: string, roadmapDuration: number, owner: string): Promise<Roadmap | null> {
         const promptConstructor = new PromptConstruct;
 
         const MAX_RETRIES = 2;
@@ -17,7 +17,7 @@ export class Generator {
 
         for(let i = 0; i < MAX_RETRIES; i++){
 
-            const myprompt = promptConstructor.constructInitialPrompt(userPrompt, roadmapTitle, roadmapDuration);
+            const myprompt = promptConstructor.constructInitialPrompt(description, roadmapTitle, roadmapDuration);
             const geminiResponse = await gemini(myprompt);
             try {
                 const transformer = new DataTransformer(
@@ -25,7 +25,7 @@ export class Generator {
                     new RoadmapValidator(),
                     new RoadmapEnricher()
                 );
-                finalRoadmapStruct = transformer.transform(geminiResponse, { title: roadmapTitle, duration: roadmapDuration, owner: owner });
+                finalRoadmapStruct = transformer.transform(geminiResponse, { title: roadmapTitle, duration: roadmapDuration, owner: owner, description: description });
                 logger.info("Initial Roadmap structure constructed");
                 break;
             } catch (error) {

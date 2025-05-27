@@ -1,5 +1,5 @@
 // review required for this file
-import { gemini } from "@axonicles/lib/index";
+import { gemini } from "@axonicles/lib/geminiConnection";
 import { subtopicDescriptionSchema } from "@axonicles/zod-schemas/index";
 import { PromptConstruct } from "../lib/promptConstructor";
 import { JsonParser } from "../lib/DataTransformer/JsonParser";

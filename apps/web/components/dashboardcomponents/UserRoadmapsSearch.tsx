@@ -2,7 +2,7 @@
 import {useForm, useWatch} from "react-hook-form"
 import {searchSchema} from "@axonicles/zod-schemas/index"
 import {z} from "zod"
-import { sampleRoadmap } from "@axonicles/lib/index"
+import { sampleRoadmap } from "@axonicles/lib/sample"
 import { zodResolver } from '@hookform/resolvers/zod'; 
 import {FormField} from "@axonicles/ui/FormField"
 import {Input} from "@axonicles/ui/Input"

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { CurrentRoadmapStore } from "../../../../store/CurrentRoadmap.store";
 import { RoadmapsStore } from "../../../../store/Roadmaps.store";
-import { sampleRoadmap } from "@axonicles/lib/index";
+import { sampleRoadmap } from "@axonicles/lib/sample";
 
 export default function Page() {
   const params = useParams();

@@ -5,7 +5,7 @@ export class AppError extends Error {
     public readonly message: string;
     public readonly isOperational: boolean;
   
-    constructor(message: string, statusCode = 500, isOperational = true) {
+    constructor(message: string, statusCode = 400, isOperational = true) {
       super(message);
       this.statusCode = statusCode;
       this.message = message;
@@ -26,5 +26,11 @@ export class BadRequestError extends AppError {
 export class UnauthorizedError extends AppError {
   constructor(message = "Unauthorized Request") {
     super(message, 401);
+  }
+}
+
+export class InternalServerError extends AppError {
+  constructor(message = "Something went wrong! Please try again later"){
+    super(message, 500);
   }
 }

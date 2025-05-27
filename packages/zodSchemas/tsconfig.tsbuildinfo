@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/roadmap.schema.ts","./src/search.schema.ts","./src/subtopic.schema.ts","./src/subtopicdescription.schema.ts","./src/task.schema.ts"],"version":"5.8.2"}
+{"root":["./src/index.ts","./src/roadmap.schema.ts","./src/search.schema.ts","./src/subtopic.schema.ts","./src/subtopicdescription.schema.ts","./src/task.schema.ts","./src/httpreqschemas/generateroadmap.schema.ts"],"version":"5.8.2"}

@@ -1,0 +1,1 @@
+{"root":["./src/app.ts","./src/index.ts","./src/dbtypes/roadmap.type.ts","./src/dbtypes/star.type.ts","./src/dbtypes/subtopics.type.ts","./src/dbtypes/task.type.ts","./src/dbtypes/user.type.ts"],"version":"5.8.2"}

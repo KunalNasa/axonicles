@@ -25,6 +25,7 @@ const startServer = async () => {
         })
     );
     app.all("/api/auth/*splat", toNodeHandler(auth));
+    app.use(express.json());
     app.use('/api/roadmap', roadmapRoutes);
     app.use('/api/user', userRoutes);
     app.use(errorHandler as any);    

@@ -1,12 +1,14 @@
 import { RequestHandler, Router } from "express";
 import { verifyUser } from "../middlewares/verifyUser";
-import { fetchAllRoadmaps, generateRoadmap } from "../controllers/roadmap.controller";
+import { generateRoadmap, searchGlobalRoadmaps, searchUserRoadmaps } from "../controllers/roadmap.controller";
 
 const router = Router();
 
-router.use(verifyUser as RequestHandler);
+// global un-protected route
+router.get('/all-roadmaps', searchGlobalRoadmaps);
 
-router.get('/all-roadmaps', fetchAllRoadmaps);
+router.use(verifyUser as RequestHandler);
 router.post('/generate-roadmap', generateRoadmap);
+router.get('/get-user-roadmaps',searchUserRoadmaps);
 
 export default router;

@@ -13,7 +13,8 @@ export const subtopicSchema = new Schema<Subtopic>({
       required: [true, "Subtopic title is required"],
     },
     resources: {
-      type: String,
+      type: [String],
+      default: []
     },
     description: {
         type : String

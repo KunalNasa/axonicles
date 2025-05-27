@@ -1,3 +1,3 @@
-import { logger } from "@axonicles/lib/index";
+import logger  from "@axonicles/lib/logger";
 
 export const generatorLogger = logger.getSubLogger({ prefix : ["Generator"]})

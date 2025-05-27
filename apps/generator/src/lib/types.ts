@@ -15,5 +15,6 @@ export interface IParser {
     title: string;
     duration: number;
     owner: string;
+    description: string;
   }
   
