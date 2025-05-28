@@ -2,13 +2,36 @@
 @import "@axonicles/tailwind-config/theme.css";
 
 @layer components {
-  .backgroundGradient {
-    /* Gradient created with https://colorfinder.app/css-tools/gradient-creator */
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 94, 1) 3%,
-      rgba(68, 17, 254, 1) 92%
-    );
+}
+@layer utilities {
+  .animated-border {
+    @apply inline-block transition-all duration-500 ease-out p-px rounded-lg;
+  }
+
+  .animated-border:hover {
+    @apply animate-rotate-border ;
+    background-image: conic-gradient(from var(--border-angle), black 80%, var(--border-color, #22c55e) 90%, black 100%);
+    background-origin: border-box;
+    background-clip: border-box;
+  }
+}
+
+
+
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@theme{
+
+  --animate-rotate-border: border-rotate 3s linear infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
   }
 }
 .bg-secondary {

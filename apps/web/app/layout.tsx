@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "@axonicles/tailwind-config/styles.css"
 import "@axonicles/ui/styles.css"
+import Providers from "./Providers";
 
 
 const geistSans = localFont({
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

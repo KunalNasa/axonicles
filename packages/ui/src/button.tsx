@@ -20,8 +20,8 @@ export const Button = ({ children, className, variant = "primary", ...props }: B
       isTertiary
       ? "w-fit rounded-md py-1 px-4 hover:cursor-pointer text-gray-300 border border-gray-400"
       : "relative py-1 px-4 hover:cursor-pointer text-sm rounded-md border border-black transition duration-200 w-fit",
-      variant === "primary" && "bg-white border border-gray-400 shadow-inner shadow-gray-300 hover:bg-gray-950 hover:border-gray-700 hover:shadow-gray-700 hover:text-gray-300 text-gray-800",
-      variant === "secondary" && "px-1 py-1 bg-white text-black hover:shadow-none hover:bg-gray-300 ",
+      variant === "primary" && "bg-white py-2 shadow-gray-300 hover:bg-gray-300 hover:border-gray-700  text-gray-800",
+      variant === "secondary" && "px-1 py-1 bg-white text-gray-800 hover:bg-gray-300 ",
     )}
     >
       {children}

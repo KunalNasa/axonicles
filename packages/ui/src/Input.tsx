@@ -14,7 +14,7 @@ export function Input({ label, error, variant = "primary", className, ...props }
             className,
             "py-1 px-2 rounded-md border-2 text-sm transition-all duration-200 ",
             variant === "primary" && " border-gray-500 focus:outline-1 border-1 focus:outline-gray-300 focus:ring-offset-0",
-            variant === "search" && " px-7 border-gray-500 focus:outline-1 border-1 focus:outline-gray-300 focus:ring-offset-0",
+            variant === "search" && " px-7 border-gray-500 focus:outline-1 border focus:outline-gray-300 focus:ring-offset-0",
             variant === "secondary" && "border-gray-500 focus:outline-0 border-1 focus:ring-offset-0",
             variant === "tertiary" && "focus:outline-0 focus:ring-offset-0",
             error && "border-red-500 focus:ring-red-500",

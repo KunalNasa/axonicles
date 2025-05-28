@@ -2,16 +2,13 @@
 import {useForm, useWatch} from "react-hook-form"
 import {searchSchema} from "@axonicles/zod-schemas/index"
 import {z} from "zod"
-import { sampleRoadmap } from "@axonicles/lib/sample"
 import { zodResolver } from '@hookform/resolvers/zod'; 
 import {FormField} from "@axonicles/ui/FormField"
 import {Input} from "@axonicles/ui/Input"
 import { IoMdSearch } from "react-icons/io";
 import useDebounce from "../../hooks/useDebounce";
-import { RoadmapsStore } from "../../store/Roadmaps.store";
 
 export default function UserRoadmapsSearch() {
-  const {setRoadmaps} = RoadmapsStore();
     const searchForm = useForm<z.infer<typeof searchSchema>>({
         resolver: zodResolver(searchSchema),
         defaultValues: {
@@ -25,16 +22,16 @@ export default function UserRoadmapsSearch() {
     });
     
     // refetch roadmaps on change of query string
-    useDebounce({
-      value: searchValue,
-      interval: 500, // 500ms debounce
-      callback: (debouncedVal) => {
-        // API/search logic here
-        setRoadmaps([sampleRoadmap]);
-        console.log("Debounced search string:", debouncedVal);
+    // useDebounce({
+    //   value: searchValue,
+    //   interval: 500, // 500ms debounce
+    //   callback: (debouncedVal) => {
+    //     // API/search logic here
+    //     setRoadmaps([sampleRoadmap]);
+    //     console.log("Debounced search string:", debouncedVal);
         
-      }
-    });
+    //   }
+    // });
   
 
   return (
