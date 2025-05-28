@@ -236,6 +236,7 @@ export async function updateSubtopicStatus(req: Request, res: Response, next: Ne
 
 export async function searchUserRoadmaps(req: Request, res: Response, next: NextFunction) : Promise<any> {
     try {
+        // ideally it should be in query and not in body
         const {searchString} = req.body;
         const user = await getUserFromSession(req, next);
         const userId = user?.id;
@@ -257,7 +258,6 @@ export async function searchUserRoadmaps(req: Request, res: Response, next: Next
 }
 
 export async function searchGlobalRoadmaps(req: Request, res: Response, next: NextFunction) : Promise<any> {
-
     try {
         const {searchString} = req.body;
         const roadmaps = await RoadmapModel.find({

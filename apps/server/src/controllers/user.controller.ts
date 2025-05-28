@@ -6,6 +6,16 @@ import { ApiResponse } from "@axonicles/lib/ApiResponse";
 import { InternalServerError } from "@axonicles/lib/ErrorResponse";
 
 export async function userDetails(req: Request, res: Response, next: NextFunction) : Promise<any> {
+    try {
+        const user = await getUserFromSession(req, next);
+        const response: ApiResponse<typeof user> = {
+            message: "user data fetched successfully",
+            data : user
+        }
+        return res.status(200).json(response);
+    } catch (error: any) {
+        return next(new InternalServerError());
+    }
 
 }
 
