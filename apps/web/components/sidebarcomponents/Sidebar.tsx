@@ -39,7 +39,7 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   return (
     <div
-      className={`h-screen py-5 p-1 border-r-1 border-gray-800 overflow-hidden bg-secondary transition-all duration-400 ${isOpen ? "w-[210px]" : "w-[70px]"
+      className={`h-screen py-5 p-1 border-r-1 border-gray-800 overflow-hidden bg-secondary transition-all duration-400 ${isOpen ? "w-[250px]" : "w-[70px]"
         }`}
     >
       <button className={`w-full transition-all duration-300 px-2 py-4  flex ${isOpen ? 'justify-end' : 'justify-center text-xl'}`} onClick={() => setIsOpen(!isOpen)}>
