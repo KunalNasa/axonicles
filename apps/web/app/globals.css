@@ -37,6 +37,9 @@
 .bg-secondary {
   background-color: rgb(23, 23, 23);
 }
+.bg-tertiary {
+  background-color: rgb(38, 38, 38);
+}
 .bg-tertiary-local {
   background-color: rgb(64, 64, 64);
 }
