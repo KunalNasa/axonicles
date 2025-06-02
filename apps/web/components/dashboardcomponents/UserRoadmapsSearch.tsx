@@ -35,7 +35,7 @@ export default function UserRoadmapsSearch() {
   
 
   return (
-    <div className="flex flex-col gap-4 mt-3">
+    <div className="flex flex-col gap-1 mt-2">
       <form>
       <FormField
       name='searchString'

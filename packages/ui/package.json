@@ -9,7 +9,7 @@
     "dist"
   ],
   "exports": {
-    "./styles.css": "./styles.css",
+    "./styles.css": "./dist/styles.css",
     "./*": "./src/*.tsx"
   },
   "scripts": {
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@axonicles/eslint-config": "*",
-    "@axonicles/utils": "*",
     "@axonicles/typescript-config": "*",
+    "@axonicles/utils": "*",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.15.3",
     "@types/react": "19.1.0",
@@ -34,9 +34,13 @@
   },
   "dependencies": {
     "@axonicles/tailwind-config": "*",
+    "@radix-ui/react-progress": "^1.1.7",
     "@radix-ui/react-tooltip": "^1.2.7",
+    "@tailwindcss/postcss": "^4.1.8",
     "clsx": "^2.1.1",
+    "postcss": "^8.5.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8"
   }
 }

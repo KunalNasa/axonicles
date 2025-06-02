@@ -9,7 +9,7 @@ type MetricCardProps = {
 
 function MetricCard({ title, value, percentage }: MetricCardProps) {
   return (
-    <div className="flex gap-5 w-1/4 border border-gray-700 hover:border-gray-500 p-5 rounded-md justify-between text-gray-200 items-center">
+    <div className="flex gap-5 w-1/2 md:w-1/4 border border-gray-700 hover:border-gray-500 p-5 rounded-md justify-between text-gray-200 items-center">
       <div className="flex flex-col justify-between gap-3 items-start">
         <h3 className="text-lg font-semibold text-gray-200">{title}</h3>
         <p>{value}</p>
@@ -19,13 +19,12 @@ function MetricCard({ title, value, percentage }: MetricCardProps) {
   );
 }
 
-export default function UserRoadmapHeader({ data }: { data: Roadmap }) {
-  let subTopicsCount = 0; 
-  data.tasks.forEach((value) => {
-    value.subtopics.forEach(() => {
-        subTopicsCount++;
-    })
-  })
+interface IUserRoadmapHeader {
+  data : Roadmap,
+  subtopicsCount: number,
+  subtopicsProgress: number
+}
+export default function UserRoadmapHeader({ data, subtopicsCount, subtopicsProgress }: IUserRoadmapHeader) {
 
   return (
     <div>
@@ -34,9 +33,9 @@ export default function UserRoadmapHeader({ data }: { data: Roadmap }) {
         <p className="text-sm text-gray-300">{data.description}</p>
       </div>
       <div className="bg-secondary my-2 flex items-center justify-between gap-4 p-1 rounded-md w-full">
-        <MetricCard percentage={data.progress} title="Progress" value={`${data.progress} % completed`} />
+        <MetricCard percentage={data.progress} title="Overall Progress" value={`${data.progress} % completed`} />
         <MetricCard title="Total Tasks" value={`${data.tasks.length} Tasks`} />
-        <MetricCard percentage={subTopicsCount} title="Total Subtopics"value={`${subTopicsCount} Subtopics`}  />
+        <MetricCard percentage={subtopicsProgress} title="Total Subtopics"value={`${subtopicsCount} Subtopics`}  />
         <MetricCard title="Expected Duration" value={`${data.duration} Days`} />
       </div>
     </div>

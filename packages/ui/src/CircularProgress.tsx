@@ -42,6 +42,7 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
           r={radius}
           cx={size / 2}
           cy={size / 2}
+          
         />
       </svg>
       <span className="absolute text-xs">
