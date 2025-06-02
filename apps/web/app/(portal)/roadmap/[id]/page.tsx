@@ -1,35 +1,24 @@
 'use client'
-
-import { useEffect} from "react";
 import { useParams } from "next/navigation";
-import { getBaseURL } from "../../../../lib/auth/fetchBaseURL";
-
+import { QFetchRoadmapById } from "../../../../controllers/roadmaps/roadmap-api";
+import UserRoadmapHeader from "../../../../components/roadmapcomponents/UserRoadmapHeader";
+import { Roadmap } from "@axonicles/types/index";
+import DisplayTasks from "../../../../components/roadmapcomponents/DisplayTasks";
 
 
 export default function Page() {
   const params = useParams();
-  const base = getBaseURL();
-
-  async function fetchRoadmaps(){
-    const BASE_URL = getBaseURL();
-    console.log("Base URL",BASE_URL);
-    const res = await fetch(`${BASE_URL}/user/roadmap/${id}`, {
-        method: "GET",
-        credentials: "include",
-    });
-    if (!res.ok) {
-        throw new Error("Failed to fetch request logs");
-    }
-    return res.json();
-}
-  useEffect(() => {
-    fetchRoadmaps()
-  }, []);
   const id = params.id as string;
+  const {data, isLoading} = QFetchRoadmapById(id);
+  if(isLoading){
+    return <p>Loading....</p>
+  }
+  const roadmap:Roadmap = data.data;
 
   return (
     <div>
-      {id}
+      <UserRoadmapHeader data={roadmap}/>
+      <DisplayTasks data={roadmap} /> 
     </div>
   );
 }

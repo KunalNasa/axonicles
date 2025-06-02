@@ -9,7 +9,7 @@
     "dist"
   ],
   "exports": {
-    "./styles.css": "./dist/styles.css",
+    "./styles.css": "./styles.css",
     "./*": "./src/*.tsx"
   },
   "scripts": {

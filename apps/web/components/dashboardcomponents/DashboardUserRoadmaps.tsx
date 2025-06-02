@@ -1,7 +1,7 @@
 'use client'
+import { QFetchUserRoadmaps } from "../../controllers/roadmaps/roadmap-api";
 import RoadmapCards from "../roadmapcomponents/RoadmapCards";
 import { Roadmap } from "@axonicles/types/index";
-import { QFetchUserRoadmaps } from "../../controllers/fetchUserRoadmaps";
 
 export default function DashboardUserRoadmaps() {
   const { data, error, isLoading } = QFetchUserRoadmaps();
@@ -11,12 +11,12 @@ export default function DashboardUserRoadmaps() {
   if (error) {
     return <h1> Error </h1>
   }
-  const roadmaps: Roadmap[] = data.data;
-
+  const roadmaps: Roadmap[] = data?.data;
+  console.log(roadmaps);
   return (
     <div className="my-3 w-full">
       <h2 className="font-semibold text-2xl text-gray-300 mb-3">Your Roadmaps</h2>
-      {roadmaps.length === 0 ? (
+      {(!roadmaps || roadmaps.length === 0) ? (
         <p className="text-gray-400">No roadmaps found.</p>
       ) : (
         <div className="w-full flex flex-wrap gap-5 items-center justify-start mx-auto">
