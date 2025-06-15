@@ -21,27 +21,39 @@ function DisplaySubtasks({ sub, isLast }: { sub: Subtopic, isLast: boolean }) {
         <p className="flex items-center gap-2"><span><FaBookOpen/></span>Prerequisites</p>
       </td>
       <td>
-        {showDescription && <DisplayDescription sub={sub} setShowDescription={setShowDescription}/>}
+      <DisplayDescription show={showDescription} sub={sub} setShowDescription={setShowDescription}/>
       </td>
     </tr>
   );
 }
 
-function DisplayDescription({ sub, setShowDescription }: { sub: Subtopic, setShowDescription: React.Dispatch<React.SetStateAction<boolean>> }) {
+function DisplayDescription({
+  sub,
+  show,
+  setShowDescription,
+}: {
+  sub: Subtopic;
+  show: boolean;
+  setShowDescription: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
-    <div className="z-10 fixed p-4 right-0 top-0 bg-tertiary h-screen w-1/2 bg-gray flex flex-col gap-3">
+    <div
+      className={`fixed top-0 right-0 h-screen w-[600px] z-50 p-4 bg-tertiary bg-gray flex flex-col gap-3 transform transition-all duration-300 ease-in-out ${
+        show ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+      }`}
+    >
       <Button onClick={() => setShowDescription(false)} variant="tertiary">
         <span className="text-xl">
-          <IoIosClose/>
+          <IoIosClose />
         </span>
       </Button>
       <div>
         <p className="p-2">{sub.description}</p>
       </div>
-
     </div>
   );
 }
+
 
 export default function ShowSubtopics({ data }: { data: Array<Subtopic> }) {
   return (

@@ -22,7 +22,8 @@ export async function userDetails(req: Request, res: Response, next: NextFunctio
 export async function fetchAllRoadmapsOfUser(req: Request, res: Response, next: NextFunction) : Promise<any> {
     try {
         const user = await getUserFromSession(req, next);
-        const userId = user?.id;
+        // const userId = user?.id;
+        const userId = '6835d5a2312a7c3068ff73ee';
 
         const roadmaps = await RoadmapModel.find({
             owner: userId
@@ -46,12 +47,12 @@ export async function getRequestedRoadmap(req: Request, res: Response, next: Nex
         if(!roadmap){
             return next(new AppError("Roadmap not found", 404));
         }
+        //TODO: vaildate whether roadmap belongs to user or not
         const response: ApiResponse<Roadmap> = {
             message: "Roadmap data fetched successfully",
             data: roadmap
         } 
         return res.status(200).json(response);
-
     } catch (error : any) {
         console.error("Internal server error in user roadmap fetching", error.message);
         return next(new InternalServerError());
