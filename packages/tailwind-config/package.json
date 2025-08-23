@@ -1,36 +1,14 @@
 {
   "name": "@axonicles/tailwind-config",
   "version": "0.0.0",
-  "license": "MIT",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "files": [
-    "dist"
-  ],
+  "type": "module",
+  "private": true,
   "exports": {
-    "./theme.css": "./theme.css",
-    "./styles.css": "./dist/styles.css"
-  },
-  "scripts": {
-    "build": "tailwindcss -i ./styles.css -o ./dist/styles.css",
-    "lint": "eslint /",
-    "dev": "tailwindcss -i ./styles.css -o ./dist/styles.css --watch",
-    "type-check": "tsc --noEmit"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0"
+    ".": "./shared-styles.css",
+    "./postcss": "./postcss.config.js"
   },
   "devDependencies": {
-    "@axonicles/eslint-config": "*",
-    "@axonicles/typescript-config": "*",
-    "typescript": "^5.8.2"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.0.12",
-    "@tailwindcss/postcss": "^4.1.8",
-    "class-variance-authority": "^0.7.1",
-    "postcss": "^8.5.4",
-    "tailwindcss": "^4.1.8"
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.5"
   }
 }

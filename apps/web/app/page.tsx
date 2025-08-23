@@ -1,7 +1,4 @@
-
 import { Roadmap } from "@axonicles/types/index";
-import "@axonicles/tailwind-config/styles.css"
-import "@axonicles/ui/styles.css"
 import { sampleRoadmap } from "@axonicles/lib/sample";
 
 export default async function Home() {
